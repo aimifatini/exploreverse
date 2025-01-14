@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exploreverse</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#myPage">ExploreVerse</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="destination.html">DESTINATIONS</a></li>
+          <li><a href="lifestyle.html">LIFESTYLE</a></li>
+          <li><a href="contest.html">CONTEST</a></li>
+          <li><a href="about_us.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav><br><br><br>
+
+
+  <section id="contact" class="container py-5">
+    <h1 style="text-align: center;">Contact Us</h1>
+    <p style="text-align: center;">We'd love to hear from you! Whether you have a question, feedback, or would like more information, feel free to reach out to us. We're here to help!</p>
+
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h3>Our Contact Information</h3>
+            <p><strong>Customer Service Number:</strong> +6011 3726 4726</p>
+            <p><strong>Email Us:</strong> <a href="mailto:exploreverse@gmail.com">exploreverse@gmail.com</a></p>
+            <p><strong>Address:</strong><br>
+                 346, Jalan Dahlia 76 Taman Dahlia, 81399, Johor</p>
+            <p><strong>Operating Hours:</strong><br>
+                Monday to Friday: 9:00 AM - 6:00 PM<br>
+                Saturday: 10:00 AM - 4:00 PM<br>
+                Sunday: Closed</p>
+             
+                <button type="button"
+                onclick="displayMalaysiaDateTime()">
+                Clock</button>
+               
+                <p id="demo"></p>
+               
+                <script>
+                function displayMalaysiaDateTime() {
+                    const malaysiaTime = new Date().toLocaleString('en-MY', {
+                        timeZone: 'Asia/Kuala_Lumpur',
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        hour12: true
+                    });
+               
+                    document.getElementById('demo').innerHTML = malaysiaTime;
+                }
+                </script>
+        </div>
+
+
+        <div class="col-md-6">
+            <h3>Get in Touch</h3>
+            <form id="contact-form" method="POST" action="/submit_form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <div id="form-success-message" style="display: none;">
+              <p>Thank you for contacting us! We'll respond as soon as possible.</p>
+            </div>
+            <script>
+              document.getElementById('contact-form').addEventListener('submit', function(e) {
+                  e.preventDefault();
+                  document.getElementById('form-success-message').style.display = 'block';
+                  this.style.display = 'none';
+              });
+            </script>              
+        </div>
+    </div>
+</section><br><br><br><br>
+
+
+  <a href="index.html" class="home-button">🏠︎</a>
+
+
+  <footer>
+    <marquee>© 2024 ExploreVerse. All rights <sub>reserved.</sub>
+    Designed with ❤️ by <sup>ExploreVerse</sup>🦢.</marquee>
+  </footer>
+
+
+</body>
+</html>
+

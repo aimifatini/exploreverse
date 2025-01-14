@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exploreverse</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="contest.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#myPage">ExploreVerse</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="destination.html">DESTINATIONS</a></li>
+          <li><a href="lifestyle.html">LIFESTYLE</a></li>
+          <li><a href="contest.html">CONTEST</a></li>
+          <li><a href="about_us.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav><br><br><br>
+
+
+  <section class="container py-5">
+    <h1 class="section-title text-center">Join Our Travel Challenges & Contests</h1>
+    <p style="text-align: center;">Get creative, participate in our travel contests, and win exciting prizes. Your adventure could be featured on ExploreVerse!</p>
+    <br><br>
+    <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+            <div class="contest-card">
+                <img src="img/contest1.jpg" alt="Travel Photo Contest" class="img-fluid contest-image">
+                <div class="contest-content">
+                    <h5 class="contest-title">Monthly Travel Photo Contest</h5>
+                    <p>Submit your best adventure photo for a chance to win a travel voucher and be featured on our page.</p>
+                    <button class="btn btn-primary btn-enter" data-toggle="modal" data-target="#photoContestModal">Enter Now</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 mb-4">
+            <div class="contest-card">
+                <img src="img/contest2.jpg" alt="Travel Blog Contest" class="img-fluid contest-image">
+                <div class="contest-content">
+                    <h5 class="contest-title">Best Travel Blog Submission</h5>
+                    <p>Write your ultimate travel story and stand a chance to be featured on our website.</p>
+                    <button class="btn btn-primary btn-enter" data-toggle="modal" data-target="#blogContestModal">Enter Now</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 mb-4">
+            <div class="contest-card">
+                <img src="img/contest3.jpg" alt="Bucket List Challenge" class="img-fluid contest-image">
+                <div class="contest-content">
+                    <h5 class="contest-title">Bucket List Challenge</h5>
+                    <p>Create your dream travel bucket list and win a guided tour or exclusive travel experience.</p>
+                    <button class="btn btn-primary btn-enter" data-toggle="modal" data-target="#bucketListModal">Enter Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div id="photoContestModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('photoContestModal')">&times;</span>
+        <h2 class="modal-header">Enter Photo Contest</h2>
+        <div class="modal-body">
+            <p>Submit your best adventure photo here:</p>
+            <form id="photoContestForm" onsubmit="showSuccess('photoSuccessModal'); return false;">
+                <input type="text" class="form-control" placeholder="Your Name" required><br>
+                <input type="email" class="form-control" placeholder="Your Email" required><br>
+                <input type="file" class="form-control" accept="image/*" required><br>
+                <textarea class="form-control" placeholder="Photo Description" rows="4" required></textarea><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="blogContestModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('blogContestModal')">&times;</span>
+        <h2 class="modal-header">Enter Blog Contest</h2>
+        <div class="modal-body">
+            <p>Write and submit your ultimate travel story:</p>
+            <form id="blogContestForm" onsubmit="showSuccess('blogSuccessModal'); return false;">
+                <input type="text" class="form-control" placeholder="Your Name" required><br>
+                <input type="email" class="form-control" placeholder="Your Email" required><br>
+                <textarea class="form-control" placeholder="Your Travel Story" rows="6" required></textarea><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="bucketListModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('bucketListModal')">&times;</span>
+        <h2 class="modal-header">Enter Bucket List Challenge</h2>
+        <div class="modal-body">
+            <p>Share your ultimate travel bucket list:</p>
+            <form id="bucketListForm" onsubmit="showSuccess('bucketListSuccessModal'); return false;">
+                <input type="text" class="form-control" placeholder="Your Name" required><br>
+                <input type="email" class="form-control" placeholder="Your Email" required><br>
+                <textarea class="form-control" placeholder="Your Bucket List" rows="6" required></textarea><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="photoSuccessModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('photoSuccessModal')">&times;</span>
+        <h2 class="modal-header">Success!</h2>
+        <div class="modal-body">
+            <p>Your photo entry has been submitted successfully! Thank you for participating.</p>
+        </div>
+    </div>
+</div>
+
+
+<div id="blogSuccessModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('blogSuccessModal')">&times;</span>
+        <h2 class="modal-header">Success!</h2>
+        <div class="modal-body">
+            <p>Your blog entry has been submitted successfully! Thank you for sharing your story.</p>
+        </div>
+    </div>
+</div>
+
+
+<div id="bucketListSuccessModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('bucketListSuccessModal')">&times;</span>
+        <h2 class="modal-header">Success!</h2>
+        <div class="modal-body">
+            <p>Your bucket list entry has been submitted successfully! Thank you for your inspiration.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script>
+    function showModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+
+    function showSuccess(successModalId) {
+        closeAllModals();
+        showModal(successModalId);
+    }
+
+
+    function closeAllModals() {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            modal.style.display = "none";
+        });
+    }
+
+
+    window.onclick = function (event) {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+    };
+    </script>
+    </section><br><br>
+
+
+<script>
+    function showSuccess(modalId) {
+        const allModals = document.querySelectorAll('.modal');
+        allModals.forEach(modal => modal.style.display = 'none');
+   
+        const successModal = document.getElementById(modalId);
+        if (successModal) {
+            successModal.style.display = 'block';
+        }
+
+
+        setTimeout(() => {
+            closeModal(modalId);
+            window.location.href = 'contest.html';
+        }, 3000);
+    }
+   
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>    
+
+
+  <a href="index.html" class="home-button">🏠︎</a>
+
+
+  <footer>
+    <marquee>© 2024 ExploreVerse. All rights <sub>reserved.</sub>
+    Designed with ❤️ by <sup>ExploreVerse</sup>🦢.</marquee>
+  </footer>
+
+
+</body>
+</html>
+
